@@ -1,0 +1,276 @@
+<!--
+  Generated template for the AjoutProduitPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+      
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content >
+  <form  #registerForm="ngForm">
+      <ion-row>
+
+ 
+
+  <ion-card>
+  <ion-card-header>
+    <ion-card-title>Avis du professionnel</ion-card-title>
+  </ion-card-header>
+
+    <ion-item>
+    <ion-textarea placeholder="Avis du professionnel" name="avis" [(ngModel)]="avis" clearOnEdit="true"></ion-textarea>
+    </ion-item>
+
+    </ion-card>
+
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Général</ion-card-title>
+  </ion-card-header>
+
+  <ion-item>
+  <ion-label>Surface en m²</ion-label>
+    <ion-input type="number" placeholder="Surface en m²" name="surface" [(ngModel)]="surface" required></ion-input>
+  </ion-item>
+
+<ion-item>
+<ion-label>Etage</ion-label>
+    <ion-input type="number" placeholder="Etage" name="etage" [(ngModel)]="etage"  required></ion-input>
+  </ion-item>
+  </ion-card>
+
+  <ion-card>
+  <ion-card-header>
+    <ion-card-title>Localisation</ion-card-title>
+  </ion-card-header>
+
+  <ion-item>
+  <ion-label>Ville</ion-label>
+    <ion-input type="number" placeholder="Ville" name="ville" [(ngModel)]="ville" required></ion-input>
+  </ion-item>
+
+<ion-item>
+<ion-label>Quartier</ion-label>
+    <ion-input type="number" placeholder="Quartier" name="quartier" [(ngModel)]="quartier"  required></ion-input>
+  </ion-item>
+  </ion-card>
+
+
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>A l'intérieur</ion-card-title>
+  </ion-card-header>
+
+    <ion-item>
+    <ion-label>Salon</ion-label>
+    <ion-input type="number" placeholder="Salon" name="salon" [(ngModel)]="salon"  required></ion-input>
+  </ion-item>
+
+<ion-item>
+<ion-label>Toilette</ion-label>
+    <ion-input type="number" placeholder="Toilette" name="toilette" [(ngModel)]="toilette"  required></ion-input>
+  </ion-item>
+
+  <ion-item>
+  <ion-label>Cuisine</ion-label>
+    <ion-input type="number" placeholder="Cuisine" name="cuisine" [(ngModel)]="cuisine"  required></ion-input>
+  </ion-item>
+
+<ion-item>
+<ion-label>Chambre</ion-label>
+    <ion-input type="number" placeholder="Chambre" name="chambre" [(ngModel)]="chambre"  required></ion-input>
+  </ion-item>
+</ion-card>
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>A l'extérieur</ion-card-title>
+  </ion-card-header>
+
+    <ion-item>
+  <ion-label>Parking</ion-label>
+  <ion-select name="parking" [(ngModel)]="parking">
+    <ion-option value="oui">Oui</ion-option>
+    <ion-option value="non">Non</ion-option>
+  </ion-select>
+</ion-item>
+
+  <ion-item>
+  <ion-label>Terrasse</ion-label>
+  <ion-select name="terrasse" [(ngModel)]="terrasse">
+    <ion-option value="oui">Oui</ion-option>
+    <ion-option value="non">Non</ion-option>
+  </ion-select>
+</ion-item>
+
+ <ion-item>
+  <ion-label>Jardin</ion-label>
+  <ion-select name="jardin" [(ngModel)]="jardin">
+    <ion-option value="oui">Oui</ion-option>
+    <ion-option value="non">Non</ion-option>
+  </ion-select>
+</ion-item>
+  </ion-card>
+
+  <ion-card>
+  <ion-card-header>
+    <ion-card-title>Particularité</ion-card-title>
+  </ion-card-header>
+
+    <ion-item>
+  <ion-label>Type appartement</ion-label>
+  <ion-select name="typeAppartement" [(ngModel)]="typeAppartement">
+    <ion-option value="moderne">Moderne</ion-option>
+    <ion-option value="ultra-moderne">Ultra moderne</ion-option>
+    <ion-option value="haut-standing">Haut Standing</ion-option>
+    <ion-option value="autre">Autre</ion-option>
+  </ion-select>
+</ion-item>
+
+ <ion-item>
+  <ion-label>Caméra de surveillance</ion-label>
+  <ion-select name="cameras" [(ngModel)]="cameras">
+    <ion-option value="oui">Oui</ion-option>
+    <ion-option value="non">Non</ion-option>
+  </ion-select>
+</ion-item>
+
+<ion-item>
+  <ion-label>Gardien</ion-label>
+  <ion-select name="gardien" [(ngModel)]="gardien">
+    <ion-option value="oui">Oui</ion-option>
+    <ion-option value="non">Non</ion-option>
+  </ion-select>
+</ion-item>
+
+<ion-item>
+  <ion-label>Groupe électrogène</ion-label>
+  <ion-select name="groupeE" [(ngModel)]="groupeE">
+    <ion-option value="oui">Oui</ion-option>
+    <ion-option value="non">Non</ion-option>
+  </ion-select>
+</ion-item>
+
+<ion-item>
+  <ion-label>Ascenseur</ion-label>
+  <ion-select name="ascenseur" [(ngModel)]="ascenseur">
+    <ion-option value="oui">Oui</ion-option>
+    <ion-option value="non">Non</ion-option>
+  </ion-select>
+</ion-item>
+
+<ion-item>
+  <ion-label>Climatiseur</ion-label>
+  <ion-select name="climatiseur" [(ngModel)]="climatiseur">
+    <ion-option value="oui">Oui</ion-option>
+    <ion-option value="non">Non</ion-option>
+  </ion-select>
+</ion-item>
+
+<ion-item>
+  <ion-label>Wi-fi</ion-label>
+  <ion-select name="wifi" [(ngModel)]="wifi">
+    <ion-option value="oui">Oui</ion-option>
+    <ion-option value="non">Non</ion-option>
+  </ion-select>
+</ion-item>
+
+<ion-item>
+  <ion-label>Jacuzzi</ion-label>
+  <ion-select name="jac" [(ngModel)]="jac">
+    <ion-option value="oui">Oui</ion-option>
+    <ion-option value="non">Non</ion-option>
+  </ion-select>
+</ion-item>
+
+  
+  </ion-card>
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Autres</ion-card-title>
+  </ion-card-header>
+
+    <ion-item>
+    <ion-textarea placeholder="Autre" name="autre" [(ngModel)]="autre" clearOnEdit="true"></ion-textarea>
+    </ion-item>
+</ion-card>
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Prix</ion-card-title>
+  </ion-card-header>
+
+    <ion-item>
+    <ion-input type="number" placeholder="Prix" name="prix" [(ngModel)]="prix"  required></ion-input>
+    </ion-item>
+
+     <ion-card-header>
+    <ion-card-title>Lien de la visite guidée</ion-card-title>
+  </ion-card-header>
+
+    <ion-item>
+    <ion-textarea placeholder="URL du site" name="url" [(ngModel)]="url" clearOnEdit="true"></ion-textarea>
+    </ion-item>
+
+<ion-item>
+  <ion-label>Type</ion-label>
+  <ion-select name="typeL" [(ngModel)]="typeL">
+    <ion-option value="location">Location</ion-option>
+    <ion-option value="vente">Vente</ion-option>
+  </ion-select>
+</ion-item>
+</ion-card>
+
+ <ion-card text-center>
+    <ion-card-header>
+      <ion-card-title>Choisissez l'arrière plans</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="fileUpload btn btn-primary">
+        <span>Upload</span>
+        <ion-item>
+          <p align="center"><img src="{{myphoto}}"></p>
+
+          
+
+        </ion-item>
+       
+        <ion-item>
+            <ion-fab center bottom class="upButton">
+              <button ion-fab color="primary" (click)="getImage()">
+                <ion-icon name="cloud-upload"></ion-icon>
+              </button>
+            </ion-fab>
+        </ion-item>
+       
+        
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+
+    <!--<button full>
+      <ion-label>Images Secondaires</ion-label>
+      <input multiple type="file" (change)="loadImageFromDevice($event)" accept="image/png, image/jpeg">
+    </button>-->
+
+             </ion-row>
+
+      <ion-row>
+        <ion-col class="signup-col">
+          <!--<button ion-button class="submit-btn" full type="submit" [disabled]="!registerForm.form.valid">Ajouter</button>-->
+          <button  full ion-button text-only round (click)="Ajout()">Ajouter</button>
+        </ion-col>
+      </ion-row>
+
+    </form>
+</ion-content>

@@ -1,0 +1,126 @@
+<!--
+  Generated template for the AjoutProduitPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+      
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content >
+  <form  #registerForm="ngForm">
+      <ion-row>
+
+ 
+
+  <ion-card>
+  <ion-card-header>
+    <ion-card-title>Nom du Logis</ion-card-title>
+  </ion-card-header>
+
+    <ion-item>
+    <ion-textarea placeholder="Nom du Logis" name="nomLogis" [(ngModel)]="value.nomLogis" clearOnEdit="true"></ion-textarea>
+    </ion-item>
+
+    </ion-card>
+
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Général</ion-card-title>
+  </ion-card-header>
+
+  <ion-item>
+  <ion-label>Nombre de chambre</ion-label>
+    <ion-input type="number" placeholder="Nombre de chambre" name="nbreChambre" [(ngModel)]="value.nbreChambre" required></ion-input>
+  </ion-item>
+
+<ion-item>
+<ion-label>Nombre de Douche</ion-label>
+    <ion-input type="number" placeholder="Nombre de Douche" name="nbreDouche" [(ngModel)]="value.nbreDouche"  required></ion-input>
+  </ion-item>
+
+<ion-item>
+<ion-label>Nombre de cuisine</ion-label>
+    <ion-input type="number" placeholder="Nombre de cuisine" name="nbreCuisine" [(ngModel)]="value.nbreCuisine"  required></ion-input>
+  </ion-item>
+
+  <ion-item>
+<ion-label>Nombre de salon</ion-label>
+    <ion-input type="number" placeholder="Nombre de salon" name="nbreSalon" [(ngModel)]="value.nbreSalon"  required></ion-input>
+  </ion-item>
+
+  </ion-card>
+
+  <ion-card>
+  <ion-card-header>
+    <ion-card-title>Localisation</ion-card-title>
+  </ion-card-header>
+
+ <ion-item>
+<ion-label>Etage</ion-label>
+    <ion-input type="number" placeholder="A quel etage se trouve le logis" name="etage" [(ngModel)]="value.etage"  required></ion-input>
+  </ion-item>
+
+  </ion-card>
+
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Autres</ion-card-title>
+  </ion-card-header>
+
+    <ion-item>
+    <ion-textarea placeholder="Autre" name="autre" [(ngModel)]="value.autre" clearOnEdit="true"></ion-textarea>
+    </ion-item>
+</ion-card>
+
+ <ion-card text-center>
+    <ion-card-header>
+      <ion-card-title>Choisissez une photo de l'immeuble</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="fileUpload btn btn-primary">
+        <span>Upload</span>
+        <ion-item>
+          <p align="center"><img src="{{myphoto}}"></p>
+
+          
+
+        </ion-item>
+       
+        <ion-item>
+            <ion-fab center bottom class="upButton">
+              <button ion-fab color="primary" (click)="getImage()">
+                <ion-icon name="cloud-upload"></ion-icon>
+              </button>
+            </ion-fab>
+        </ion-item>
+       
+        
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+
+    <!--<button full>
+      <ion-label>Images Secondaires</ion-label>
+      <input multiple type="file" (change)="loadImageFromDevice($event)" accept="image/png, image/jpeg">
+    </button>-->
+
+             </ion-row>
+
+      <ion-row>
+        <ion-col class="signup-col">
+          <!--<button ion-button class="submit-btn" full type="submit" [disabled]="!registerForm.form.valid">Ajouter</button>-->
+          <button  full ion-button text-only round (click)="updateNote(value)">Modifier</button>
+        </ion-col>
+      </ion-row>
+
+    </form>
+</ion-content>

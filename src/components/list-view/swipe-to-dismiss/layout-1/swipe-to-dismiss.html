@@ -1,0 +1,27 @@
+<!--Theme Appearance animation (Fade In Left)-->
+<ion-content>
+  <ion-grid no-padding *ngIf="data != null">
+      <ion-row>
+          <ion-col col-12>
+          <ion-list-header header-section no-margin>
+          <!-- Big Title Swipe To Dismiss Products + CTA -->
+          <h1 header-title text-capitalize>Logis </h1>
+          <button item-end ion-button button-clear-outline outline round (click)="onEvent('onAjouterLogis', '', $event)">Ajouter</button>
+
+          <!--<button item-end ion-button button-clear-outline outline round *ngIf="data.header == 'Appt non mblé'" (click)="onEvent('onAjouterApptNM', '', $event)">Ajouter</button>-->
+          
+        </ion-list-header>
+              <ion-list no-margin>
+                  <ion-item border no-lines [ngClass]="animateClass" *ngFor="let item of animateItems; let i = index;" (click)="onEvent('onItemClick', item.uid, item, $event)">
+                      <ion-avatar item-left>
+                          <img [src]="item.image" alt="{{item.prenom}}" />
+                      </ion-avatar>
+                      <h2 item-title>{{item.prenom}} {{item.username}}</h2>
+                      
+                  </ion-item>
+              </ion-list>
+               <p *ngIf="data.length != 0">Pas de données ...</p>   
+          </ion-col>
+      </ion-row>
+  </ion-grid>
+</ion-content>

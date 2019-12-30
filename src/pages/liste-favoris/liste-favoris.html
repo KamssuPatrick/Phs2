@@ -1,0 +1,383 @@
+<!--
+  Generated template for the ListeFavorisPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    
+    <ion-title>Mes Favoris</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content >
+
+<ion-grid no-padding >
+  <ion-row *ngIf="params != null">
+  <h2 *ngIf="params.items.length != 0">Bureau</h2>
+    <ion-col col-12 col-lg-4 *ngFor="let item of params.items;let i = index">
+      <ion-card text-left>
+        <!--Card Image-->
+        <div card-image>
+          <img [src]="item.profilePic" height='200' (click)="detail(item.Id,item.profilePic, 3)"/>
+          <ion-badge ion-fixed item-end class="badge-dark">{{item.prix}} / jour</ion-badge>
+
+        
+    
+          <button ion-fixed ion-button button-action-shit (click)="onVisite()">
+             <ion-icon name='eye'> </ion-icon>
+             <!--<ion-icon name='eye-off'*ngIf="fav.Id != item.uid"> </ion-icon>-->
+          </button>
+
+         
+          
+        </div>
+         <!--Card descriptiom-->
+        <ion-card-content (click)="onEvent('onItemClick', item.uid, item.image, $event)">
+            <p>Appartement ultra-moderne 3 chambres ( meublé ) à louer à Bonapriso Haut Standing - Grandes pieces - Ascenseur - Groupe électrogène - Parking - Gardiens H24 - Cameras de surveillance -  Grand Jardin 💰 :  100mille  fcfa/jour</p>
+            
+        </ion-card-content>
+
+
+      <ion-row no-padding>
+      
+      
+      <ion-col text-left>
+      
+            <button ion-button clear small color="danger" icon-left (click)="Delfavoris(item.type, item.Key, item)">
+            <ion-icon name="star" color="danger" ></ion-icon>
+            
+            Favoris 
+          </button>
+      </ion-col>
+
+      <ion-col text-right>
+        <button ion-button clear small color="danger" icon-left (click)="share(card)">
+          <ion-icon name="mail"></ion-icon>
+          Message
+        </button>
+      </ion-col>
+    </ion-row>
+      </ion-card>
+    </ion-col>
+    
+  </ion-row>
+
+
+
+
+<ion-row *ngIf="params1 != null">
+<h2 *ngIf="params1.items.length != 0">Villa</h2>
+    <ion-col col-12 col-lg-4 *ngFor="let item of params1.items;let i = index">
+      <ion-card text-left>
+        <!--Card Image-->
+        <div card-image>
+          <img [src]="item.profilePic" height='200' (click)="detail(item.Id,item.profilePic, 0)"/>
+          <ion-badge ion-fixed item-end class="badge-dark">{{item.prix}} / jour</ion-badge>
+
+        
+    
+          <button ion-fixed ion-button button-action-shit (click)="onVisite()">
+             <ion-icon name='eye'> </ion-icon>
+             <!--<ion-icon name='eye-off'*ngIf="fav.Id != item.uid"> </ion-icon>-->
+          </button>
+
+         
+          
+        </div>
+         <!--Card descriptiom-->
+        <ion-card-content (click)="onEvent('onItemClick', item.uid, item.image, $event)">
+            <p>Appartement ultra-moderne 3 chambres ( meublé ) à louer à Bonapriso Haut Standing - Grandes pieces - Ascenseur - Groupe électrogène - Parking - Gardiens H24 - Cameras de surveillance -  Grand Jardin 💰 :  100mille  fcfa/jour</p>
+            
+        </ion-card-content>
+
+
+      <ion-row no-padding>
+      
+      
+      <ion-col text-left>
+      
+            <button ion-button clear small color="danger" icon-left (click)="Delfavoris(item.type, item.Key, item)">
+            <ion-icon name="star" color="danger" ></ion-icon>
+            
+            Favoris 
+          </button>
+      </ion-col>
+
+      <ion-col text-right>
+        <button ion-button clear small color="danger" icon-left (click)="share(card)">
+          <ion-icon name="mail"></ion-icon>
+          Message
+        </button>
+      </ion-col>
+    </ion-row>
+      </ion-card>
+    </ion-col>
+    
+  </ion-row>
+
+
+<ion-row *ngIf="params2 != null">
+<h2 *ngIf="params2.items.length != 0">Magasin</h2>
+    <ion-col col-12 col-lg-4 *ngFor="let item of params2.items;let i = index">
+      <ion-card text-left>
+        <!--Card Image-->
+        <div card-image>
+          <img [src]="item.profilePic" height='200' (click)="detail(item.Id,item.profilePic, 4)"/>
+          <ion-badge ion-fixed item-end class="badge-dark">{{item.prix}} / jour</ion-badge>
+
+        
+    
+          <button ion-fixed ion-button button-action-shit (click)="onVisite()">
+             <ion-icon name='eye'> </ion-icon>
+             <!--<ion-icon name='eye-off'*ngIf="fav.Id != item.uid"> </ion-icon>-->
+          </button>
+
+         
+          
+        </div>
+         <!--Card descriptiom-->
+        <ion-card-content (click)="onEvent('onItemClick', item.uid, item.image, $event)">
+            <p>Appartement ultra-moderne 3 chambres ( meublé ) à louer à Bonapriso Haut Standing - Grandes pieces - Ascenseur - Groupe électrogène - Parking - Gardiens H24 - Cameras de surveillance -  Grand Jardin 💰 :  100mille  fcfa/jour</p>
+            
+        </ion-card-content>
+
+
+      <ion-row no-padding>
+      
+      
+      <ion-col text-left>
+      
+            <button ion-button clear small color="danger" icon-left (click)="Delfavoris(item.type, item.Key, item)">
+            <ion-icon name="star" color="danger" ></ion-icon>
+            
+            Favoris 
+          </button>
+      </ion-col>
+
+      <ion-col text-right>
+        <button ion-button clear small color="danger" icon-left (click)="share(card)">
+          <ion-icon name="mail"></ion-icon>
+          Message
+        </button>
+      </ion-col>
+    </ion-row>
+      </ion-card>
+    </ion-col>
+    
+  </ion-row>
+
+
+<ion-row *ngIf="params3 != null">
+<h2 *ngIf="params3.items.length != 0">Immeuble</h2>
+    <ion-col col-12 col-lg-4 *ngFor="let item of params3.items;let i = index">
+      <ion-card text-left>
+        <!--Card Image-->
+        <div card-image>
+          <img [src]="item.profilePic" height='200' (click)="detail(item.Id,item.profilePic, 2)"/>
+          <ion-badge ion-fixed item-end class="badge-dark">{{item.prix}} / jour</ion-badge>
+
+        
+    
+          <button ion-fixed ion-button button-action-shit (click)="onVisite()">
+             <ion-icon name='eye'> </ion-icon>
+             <!--<ion-icon name='eye-off'*ngIf="fav.Id != item.uid"> </ion-icon>-->
+          </button>
+
+         
+          
+        </div>
+         <!--Card descriptiom-->
+        <ion-card-content (click)="onEvent('onItemClick', item.uid, item.image, $event)">
+            <p>Appartement ultra-moderne 3 chambres ( meublé ) à louer à Bonapriso Haut Standing - Grandes pieces - Ascenseur - Groupe électrogène - Parking - Gardiens H24 - Cameras de surveillance -  Grand Jardin 💰 :  100mille  fcfa/jour</p>
+            
+        </ion-card-content>
+
+
+      <ion-row no-padding>
+      
+      
+      <ion-col text-left>
+      
+            <button ion-button clear small color="danger" icon-left (click)="Delfavoris(item.type, item.Key, item)">
+            <ion-icon name="star" color="danger" ></ion-icon>
+            
+            Favoris 
+          </button>
+      </ion-col>
+
+      <ion-col text-right>
+        <button ion-button clear small color="danger" icon-left (click)="share(card)">
+          <ion-icon name="mail"></ion-icon>
+          Message
+        </button>
+      </ion-col>
+    </ion-row>
+      </ion-card>
+    </ion-col>
+    
+  </ion-row>
+
+
+<ion-row *ngIf="params4 != null">
+<h2 *ngIf="params4.items.length != 0">Bail</h2>
+    <ion-col col-12 col-lg-4 *ngFor="let item of params4.items;let i = index">
+      <ion-card text-left>
+        <!--Card Image-->
+        <div card-image>
+          <img [src]="item.profilePic" height='200' (click)="detail(item.Id,item.profilePic, 5)"/>
+          <ion-badge ion-fixed item-end class="badge-dark">{{item.prix}} / jour</ion-badge>
+
+        
+    
+          <button ion-fixed ion-button button-action-shit (click)="onVisite()">
+             <ion-icon name='eye'> </ion-icon>
+             <!--<ion-icon name='eye-off'*ngIf="fav.Id != item.uid"> </ion-icon>-->
+          </button>
+
+         
+          
+        </div>
+         <!--Card descriptiom-->
+        <ion-card-content (click)="onEvent('onItemClick', item.uid, item.image, $event)">
+            <p>Appartement ultra-moderne 3 chambres ( meublé ) à louer à Bonapriso Haut Standing - Grandes pieces - Ascenseur - Groupe électrogène - Parking - Gardiens H24 - Cameras de surveillance -  Grand Jardin 💰 :  100mille  fcfa/jour</p>
+            
+        </ion-card-content>
+
+
+      <ion-row no-padding>
+      
+      
+      <ion-col text-left>
+      
+            <button ion-button clear small color="danger" icon-left (click)="Delfavoris(item.type, item.Key, item)">
+            <ion-icon name="star" color="danger" ></ion-icon>
+            
+            Favoris 
+          </button>
+      </ion-col>
+
+      <ion-col text-right>
+        <button ion-button clear small color="danger" icon-left (click)="share(card)">
+          <ion-icon name="mail"></ion-icon>
+          Message
+        </button>
+      </ion-col>
+    </ion-row>
+      </ion-card>
+    </ion-col>
+    
+  </ion-row>
+
+
+<ion-row *ngIf="params5 != null">
+<h2 *ngIf="params5.items.length != 0">Appartement non meublé </h2>
+    <ion-col col-12 col-lg-4 *ngFor="let item of params5.items;let i = index">
+      <ion-card text-left>
+        <!--Card Image-->
+        <div card-image>
+          <img [src]="item.profilePic" height='200' (click)="detail(item.Id,item.profilePic, 1)"/>
+          <ion-badge ion-fixed item-end class="badge-dark">{{item.prix}} / jour</ion-badge>
+
+        
+    
+          <button ion-fixed ion-button button-action-shit (click)="onVisite()">
+             <ion-icon name='eye'> </ion-icon>
+             <!--<ion-icon name='eye-off'*ngIf="fav.Id != item.uid"> </ion-icon>-->
+          </button>
+
+         
+          
+        </div>
+         <!--Card descriptiom-->
+        <ion-card-content (click)="onEvent('onItemClick', item.uid, item.image, $event)">
+            <p>Appartement ultra-moderne 3 chambres ( meublé ) à louer à Bonapriso Haut Standing - Grandes pieces - Ascenseur - Groupe électrogène - Parking - Gardiens H24 - Cameras de surveillance -  Grand Jardin 💰 :  100mille  fcfa/jour</p>
+            
+        </ion-card-content>
+
+
+      <ion-row no-padding>
+      
+      
+      <ion-col text-left>
+      
+            <button ion-button clear small color="danger" icon-left (click)="Delfavoris(item.type, item.Key, item)">
+            <ion-icon name="star" color="danger" ></ion-icon>
+            
+            Favoris 
+          </button>
+      </ion-col>
+
+      <ion-col text-right>
+        <button ion-button clear small color="danger" icon-left (click)="share(card)">
+          <ion-icon name="mail"></ion-icon>
+          Message
+        </button>
+      </ion-col>
+    </ion-row>
+      </ion-card>
+    </ion-col>
+    
+  </ion-row>
+
+
+<ion-row *ngIf="params6 != null">
+<h2 *ngIf="params6.items.length != 0">Appartement meublé</h2>
+    <ion-col col-12 col-lg-4 *ngFor="let item of params6.items;let i = index">
+      <ion-card text-left>
+        <!--Card Image-->
+        <div card-image>
+          <img [src]="item.profilePic" height='200' (click)="detail(item.uid,item.profilePic, 4)"/>
+          <ion-badge ion-fixed item-end class="badge-dark">{{item.prix}} / jour</ion-badge>
+
+        
+    
+          <button ion-fixed ion-button button-action-shit (click)="onVisite()">
+             <ion-icon name='eye'> </ion-icon>
+             <!--<ion-icon name='eye-off'*ngIf="fav.Id != item.uid"> </ion-icon>-->
+          </button>
+
+         
+          
+        </div>
+         <!--Card descriptiom-->
+        <ion-card-content (click)="onEvent('onItemClick', item.uid, item.image, $event)">
+            <p>Appartement ultra-moderne 3 chambres ( meublé ) à louer à Bonapriso Haut Standing - Grandes pieces - Ascenseur - Groupe électrogène - Parking - Gardiens H24 - Cameras de surveillance -  Grand Jardin 💰 :  100mille  fcfa/jour</p>
+            
+        </ion-card-content>
+
+
+      <ion-row no-padding>
+      
+      
+      <ion-col text-left>
+      
+            <button ion-button clear small color="danger" icon-left (click)="Delfavoris(item.type, item.Key, item)">
+            <ion-icon name="star" color="danger" ></ion-icon>
+            
+            Favoris 
+          </button>
+      </ion-col>
+
+      <ion-col text-right>
+        <button ion-button clear small color="danger" icon-left (click)="share(card)">
+          <ion-icon name="mail"></ion-icon>
+          Message
+        </button>
+      </ion-col>
+    </ion-row>
+      </ion-card>
+    </ion-col>
+    
+  </ion-row>
+
+<ion-row *ngIf="params.items.length == 0 && params1.items.length == 0 && params2.items.length == 0 && params3.items.length == 0 && params4.items.length == 0 && params5.items.length == 0 && params6.items.length == 0">
+
+
+<h2 >Aucun favoris enregistré</h2>
+</ion-row>
+
+</ion-grid>
+</ion-content>

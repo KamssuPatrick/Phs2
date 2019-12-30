@@ -1,0 +1,83 @@
+<!--- Theme Parallax - Product -->
+<ion-header header-ios>
+  <ion-navbar transparent [ngClass]="{'active':isClassActive()}">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title *ngIf="data != null">{{data.avis}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content elastic-header>
+  <!-- Parallax Big Image -->
+  <ion-item no-lines background-size id="elastic-header" >
+   
+       <!--<ion-icon id= "ion_icon" icon-medium name="{{data.shareIcon}}" (click)="onEvent('onFavorite')" > <i class="icon" [ngClass]="{'icon-heart': data.favorite, 'icon-heart-outline': !data.favorite}"></i></ion-icon> 
+--> 
+<ion-grid id= "ion_icon">
+  <!--<ion-row>
+    <ion-col col-6>
+      <button  ion-button full text-capitalize default-button>
+      <ion-icon  name="{{data.shareIcon}}" [ngStyle]="{'color': buttonsColor}" (click)="onEvent('onFavorite')"> </ion-icon>
+      </button>
+    </ion-col>
+    <ion-col col-6>
+      <button  ion-button full text-capitalize default-button>
+      <ion-icon  name="{{data.galeryIcon}}" (click)="onEvent('onGalleryClick', item)"> Gallery</ion-icon>
+      </button>
+    </ion-col>
+  </ion-row>-->
+</ion-grid>
+
+  </ion-item>
+
+  <!-- <div id="cool-button-div">
+      <button ion-button full text-capitalize default-button (click)="onEvent('onFavorite')" > Sauvegarder <ion-icon  name="{{data.shareIcon}}" [ngStyle]="{'color': buttonsColor}"></ion-icon> </button>
+      </div>-->
+  <!--Content-->
+<!--<div  *ngIf="datas != null">
+<ion-card *ngFor="let group of datas.items;let i = index;" (click)="onEvent('onItemClick', item)">
+  <ion-card-header>
+    <ion-card-subtitle>{{group.avis}}</ion-card-subtitle>
+    <ion-card-title>{{group.id}}</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    {{group.avis}}
+  </ion-card-content>
+</ion-card>
+</div> -->
+
+  <ion-grid no-padding *ngIf="data != null">
+    <ion-row>
+      <ion-col col-12>
+        <ion-list no-margin>
+          <ion-item-group  >
+            <ion-item-divider no-lines>
+              <!-- Name Category-->
+              <span new-category margin-top text-uppercase ion-text color="primary">{{item.avis}}</span>
+              <!-- Parallax Title -->
+              <h2 parallax-title text-wrap>{{item.avis}}</h2>
+              <!-- Parallax Subtitle -->
+              <h3 parallax-subtitle text-wrap>{{item.avis}}</h3>
+              <ion-badge item-end text-uppercase class="badge-dark" (click)="onEvent('onProceed', item, $event)">{{item.avis}}</ion-badge>
+            </ion-item-divider>
+            <!-- Description Products -->
+            <ion-item border no-lines no-margin>
+              <p parallax-description text-wrap>{{item.avis}}</p>
+            </ion-item>
+            <!--Content With Text
+            <ion-item no-lines *ngFor="let productDescription of item.productDescriptions">
+              <p parallax-description text-wrap>{{productDescription.avis}}</p>
+            </ion-item>-->
+          </ion-item-group>
+        </ion-list>
+        
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+
+
+

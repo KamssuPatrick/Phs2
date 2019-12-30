@@ -1,0 +1,109 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content id="location-feed-content" padding>
+  <ion-searchbar></ion-searchbar>
+  <!--list section-->
+  <div class="location-list">
+      <!--location item section-->
+      <div class="location-item" *ngFor="let build of params.items">
+          <div class="location-img" (click)="openBuilding(build, build.uid)" [style.background-image]="'url(' + build.profilePic + ')'">
+            
+          </div>
+          <div class="location-content row">
+              <div class="col-90">
+                  <h1>
+                    {{build.nomImmeuble}}
+                  </h1>
+
+                  <p>
+                      <i class="fa fa-flag"></i>  {{build.ville}}
+                  </p>
+              </div>
+              <ion-badge item-end class="nbTenants">{{params.items.length}} Tenants</ion-badge>
+              
+          </div>
+      </div><!--end location item section-->
+
+      <!--location item section
+      <div class="location-item">
+          <div class="location-img" style="background-image:url('../assets/imgs/location_feed_02.png')">
+
+          </div>
+          <div class="location-content row">
+              <div class="col-90">
+                  <h1>
+                      Little Clock tower
+                  </h1>
+
+                  <p>
+                      <i class="fa fa-flag"></i> Essos, Yaoundé
+                  </p>
+              </div>
+              
+          </div>
+      </div>
+      <div class="location-item">
+          <div class="location-img" style="background-image:url('../assets/imgs/location_feed_03.png')">
+
+          </div>
+          <div class="location-content row">
+              <div class="col-90">
+                  <h1>
+                      Play ground
+                  </h1>
+
+                  <p>
+                      <i class="fa fa-flag"></i> Mvog-Mbi, Yaoundé
+                  </p>
+              </div>
+              
+          </div>
+      </div>
+      <div class="location-item">
+          <div class="location-img" style="background-image:url('../assets/imgs/location_feed_04.png')">
+
+          </div>
+          <div class="location-content row">
+              <div class="col-90">
+                  <h1>
+                      Green park
+                  </h1>
+
+                  <p>
+                      <i class="fa fa-flag"></i> Bonapriso, Douala
+                  </p>
+              </div>
+              
+          </div>
+      </div>
+      <div class="location-item">
+          <div class="location-img" style="background-image:url('../assets/imgs/location_feed_05.png')">
+
+          </div>
+          <div class="location-content row">
+              <div class="col-90">
+                  <h1>
+                      Woman Garden
+                  </h1>
+
+                  <p>
+                      <i class="fa fa-flag"></i> Bonapriso, Douala
+                  </p>
+              </div>
+             
+          </div>
+      </div>-->
+
+  </div><!--end list section-->
+  <ion-fab right bottom>
+    <button ion-fab (click)="addBuilding()"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+
+</ion-content>

@@ -1,0 +1,31 @@
+<ion-header>
+
+    <ion-navbar color="header">
+      <ion-title>Messagerie</ion-title>
+      
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+  
+  
+  <ion-list>
+      <ion-item *ngFor="let item of Conversations.reverse(); let i = index" (click)="openChatBody(allUsers[i])">
+          <!-- <ion-avatar item-left>
+              <img src="{{allUsers[i].Photo}}">
+          </ion-avatar> -->
+          <div>
+              <h3 text-left>{{allUsers[i].username}} <span float-end>{{item.Time}}</span> </h3>
+              <h3>{{item.Body}}</h3>
+          </div>
+      </ion-item>
+  </ion-list>  
+  
+  </ion-content>
+  
+  
+  
+  
+  

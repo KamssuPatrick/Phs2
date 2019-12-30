@@ -1,0 +1,65 @@
+page-gestion-utilisateur {
+
+    .scroll-content {
+        margin-top: 0 !important;
+      }
+    #butt_color_bloquer
+    {
+        background-color: #e9868b;
+    }
+
+    #butt_color_supprimer
+    {
+        background-color: #FE3939;
+    }
+    ion-input{
+        color: black;
+    }
+    ion-label .deco{
+        color: grey;
+        margin-left:2px;
+    }
+    ion-row.center1{
+        text-align: center;
+    }
+    
+    ion-grid,
+    ion-row {
+        height: 100%!important;
+        [background-size] {
+            height: 40%;
+            position: relative;
+            @include darkening-blend-mode;
+        }
+    
+
+        [register-title] {
+            color: color($register, register-image-title);
+            position: absolute;
+            bottom: 10px;
+            left: 25px;
+            z-index: 999;
+        }
+        ion-col img.userImage{
+            position: absolute;
+            width: 100px!important;
+            left: 50%;
+            margin-left: -50px;
+            top: 50%;
+            margin-top: -50px;
+           
+        }
+        ion-item .detail{
+            font-size: 18px;
+            margin-bottom: 5px ;
+        }
+        div.detail{ 
+            overflow: auto!important;  
+        }
+        div.boss{
+            padding: 5px;
+            
+            margin-top:0!important;
+        }
+    }
+}

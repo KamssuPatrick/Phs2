@@ -1,0 +1,59 @@
+page-admin {
+    
+    #location-feed-content {
+        padding: 10px 10px 10px 8px;
+        background-color: #282828;;
+        //list section
+        .location-list {
+          //location item section
+          .location-item {
+            box-shadow: 0px 3px 1px -2px $color_black_14, 0px 2px 2px 0px $color_black_098, 0px 1px 5px 0px $color_black_084;
+            margin-bottom: 14px;
+            
+            .location-img {
+              height: 220px;
+              background-size: cover;
+              border-top-right-radius: 2px;
+              border-top-left-radius: 2px;
+              border-radius: 15px 15px 0 0;
+            }
+            .location-content {
+              padding: 6px 10px 5px 10px;
+              background-color: $color_white;
+              border-bottom-right-radius: 2px;
+              border-bottom-left-radius: 2px;
+              border-radius: 0 0 15px 15px;
+
+              
+      
+              h1 {
+                font-size: 16px;
+                margin: 0;
+                color: $color_gray;
+              }
+              p {
+                font-size: 12px;
+                margin: 0;
+                color: $color_gray;
+              }
+              .text-add {
+                float: right;
+                background-color: $color_carnation_approx;
+                border-radius: 80px;
+                color: $color_white;
+                font-weight: 500;
+                font-size: 11px;
+                width: 65px;
+                text-align: center;
+                margin-top: 15px;
+              }
+            }
+          }//end location item section
+        }//end list section
+        .badge-md.nbTenants{
+            margin-left: auto;
+            height: 100%;
+        }
+      }//end location feed section
+
+}

@@ -1,0 +1,39 @@
+page-detail-logement {
+
+    .item-profile {
+        width: 100%;
+        background-position: center center;
+        background-size: cover;
+        height: 250px;
+      }
+    
+      .item-detail {
+        width: 100%;
+        background: white;
+        position: absolute;
+      }
+    
+      .backg{
+        background: #29332F;
+      }
+      .it ion-item{
+        background: none;
+        border: 1px solid white;
+        margin-top:10px;
+        border-radius: 50px;
+        color: white;
+      }
+      .it{
+        margin-top: 10px;
+      }
+      .space{
+        color: white;
+        display: inline-block;
+        width: 160px!important;
+        
+      }
+      .green{
+        color: #0AE33E;
+      }
+    
+}

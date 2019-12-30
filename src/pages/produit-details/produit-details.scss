@@ -1,0 +1,104 @@
+page-produit-details {
+
+    .scroll-content {
+        margin-top: 0 !important;
+      }
+    #butt_color_bloquer
+    {
+        background-color: #e9868b;
+    }
+
+    #butt_color_supprimer
+    {
+        background-color: #FE3939;
+    }
+    ion-input{
+        color: black;
+    }
+    ion-label .deco{
+        color: grey;
+        margin-left:2px;
+    }
+    ion-row.center1{
+        text-align: center;
+    }
+    
+    ion-grid,
+    ion-row {
+        height: 100%!important;
+        [background-size] {
+            height: 40%;
+            position: relative;
+            @include darkening-blend-mode;
+        }
+    
+
+        [register-title] {
+            color: white;
+            position: absolute;
+            
+            left: 40%;
+            margin-left: -40px;
+            top: 70%;
+            margin-top: -70px;
+            z-index: 9;
+            
+        }
+        ion-col .nnd{
+            border-style: solid;
+            border-width: 2px;
+            border-radius: 10px;
+            font-size:15px!important;
+            padding:5px;
+           
+        }
+        ion-col button.nnd2{
+            position: absolute;
+            bottom: 10px;
+            left:20px;
+            z-index: 10;
+            color: white;
+            font-weight: 200;
+           
+        }
+        ion-col button.nnd3{
+            position: absolute;
+            bottom: 10px;
+            right:20px;
+            z-index: 10;
+            padding:5px!important;
+            color: white;
+            font-weight: 200;
+           
+        }
+        ion-item .detail{
+            font-size: 18px;
+            margin-bottom: 5px ;
+        }
+        ion-card.ff{
+            margin-top: 10px;
+            padding: none;
+            ion-card-header ion-card-title.titleDesc{
+                color: #60a3bc;
+            }
+            ion-card-content ion-grid ion-col.bl{
+                color: #333333;
+                text-align: center;
+                font-weight: 500;
+               
+            }
+        }
+        div.detail{ 
+            overflow: auto!important;  
+        }
+        div.boss{
+            padding: 5px;
+            
+            margin-top:0!important;
+        }
+    }
+
+
+      
+
+}

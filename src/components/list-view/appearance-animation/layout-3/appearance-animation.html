@@ -1,0 +1,19 @@
+<!--Theme Appearance animation (Fade In Down)-->
+<ion-content>
+    <ion-grid no-padding *ngIf="data != null">
+        <ion-row>
+            <ion-col col-12>
+                <ion-list no-margin>
+                    <ion-item border no-lines [ngClass]="animateClass" *ngFor="let item of animateItems; let i = index;" (click)="onEvent('onItemClick', item.uid, 0, $event)">
+                        <ion-avatar item-left>
+                            <img [src]="item.image" alt="{{item.prenom}}" />
+                        </ion-avatar>
+                        <h2 item-title>{{item.user}} </h2>
+                        <h2 item-title>{{item.dateAmenagement}}</h2>
+                        
+                    </ion-item>
+                </ion-list>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

@@ -1,0 +1,140 @@
+<!--
+  Generated template for the ProduitDetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+  <ion-title>produit-details</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+
+
+<ion-grid no-padding *ngIf="value2" >
+   <ion-row center>
+  
+    <ion-col no-padding col-12 background-size [ngStyle]="{'background-image': 'url('+img+')' }" >
+      
+      <!--<img src="{{img}}" height = "380" (click) = "openGallery(value)">-->
+      
+        <span ion-text register-title text-wrap class="nnd" >{{value2.prix}} XAF/ jour</span>
+        <button ion-button outline color="primary" class="nnd2" (click)="openGallery(value)"><ion-icon name="images"></ion-icon>Galerie</button>
+        <button ion-button outline color="primary" class="nnd3" (click)="visiteGuide()">
+
+        <span *ngIf="value2.url != 'Aucun lien enregistré!'">
+        <ion-icon name="eye"></ion-icon>
+        </span>
+
+        <span *ngIf="value2.url === 'Aucun lien enregistré!'">
+        <ion-icon name="eye-off"></ion-icon>
+        </span>
+        
+        
+        Visite virtuelle</button>
+        
+     
+      
+    </ion-col>
+
+
+
+<ion-card class="ff">
+  <ion-card-header>
+    <ion-card-title class="titleDesc">Intérieur</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <hr>
+    <p><ion-grid no-padding><ion-row><ion-col>Salon: </ion-col><ion-col class="bl">{{value2.salon}}</ion-col></ion-row></ion-grid>    </p>
+    <hr/>
+    <hr>
+    <p><ion-grid no-padding><ion-row><ion-col>Chambre: </ion-col><ion-col class="bl">{{value2.chambre}}</ion-col></ion-row></ion-grid>    </p>
+    <hr/>
+    <hr>
+    <p><ion-grid no-padding><ion-row><ion-col>Cuisine: </ion-col><ion-col class="bl">{{value2.cuisine}}</ion-col></ion-row></ion-grid>    </p>
+    <hr/>
+    <hr>
+    <p><ion-grid no-padding><ion-row><ion-col>Douches: </ion-col><ion-col class="bl">{{value2.toilette}}</ion-col></ion-row></ion-grid>    </p>
+    <hr/>
+    
+  </ion-card-content>
+</ion-card>
+
+<ion-card class="ff">
+  <ion-card-header>
+    <ion-card-title class="titleDesc">Extérieur</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+      <hr>
+      <hr>
+      <p><ion-grid no-padding><ion-row><ion-col>Jardin: </ion-col><ion-col class="bl">{{value2.jardin}}</ion-col></ion-row></ion-grid>    </p>
+      <hr/>
+      <hr>
+      <p><ion-grid no-padding><ion-row><ion-col>Parking: </ion-col><ion-col class="bl">{{value2.parking}}</ion-col></ion-row></ion-grid>    </p>
+      <hr/>
+      <hr>
+      <p><ion-grid no-padding><ion-row><ion-col>Terrasse: </ion-col><ion-col class="bl">{{value2.terrasse}}</ion-col></ion-row></ion-grid>    </p>
+      <hr/>
+  </ion-card-content>
+</ion-card>
+
+
+<ion-card class="ff">
+  <ion-card-header>
+    <ion-card-title class="titleDesc">Particularité</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <hr>
+    <p><ion-grid no-padding><ion-row><ion-col>Jacuzzi: </ion-col><ion-col class="bl">{{value2.jacuzzi}}</ion-col></ion-row></ion-grid>    </p>
+    <hr/>
+    <hr>
+    <p><ion-grid no-padding><ion-row><ion-col>Wifi: </ion-col><ion-col class="bl">{{value2.wifi}}</ion-col></ion-row></ion-grid>    </p>
+    <hr/>
+    <hr>
+    <p><ion-grid no-padding><ion-row><ion-col>Groupe électrogène: </ion-col><ion-col class="bl">{{value2.groupeE}}</ion-col></ion-row></ion-grid>    </p>
+    <hr/>
+    <hr>
+    <p><ion-grid no-padding><ion-row><ion-col>Climatiseurs: </ion-col><ion-col class="bl">{{value2.climatiseur}}</ion-col></ion-row></ion-grid>    </p>
+    <hr/>
+    <hr>
+    <p><ion-grid no-padding><ion-row><ion-col>Ascenseur: </ion-col><ion-col class="bl">{{value2.ascenseur}}</ion-col></ion-row></ion-grid>    </p>
+    <hr/>
+  </ion-card-content>
+</ion-card>
+
+
+<ion-card class="ff">
+  <ion-card-header>
+    <ion-card-title class="titleDesc">Autres</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <hr>
+      <p><ion-grid no-padding><ion-row><ion-col>Gardien: </ion-col><ion-col class="bl">{{value2.gardien}}</ion-col></ion-row></ion-grid>    </p>
+      <hr/>
+    <hr>
+      <p><ion-grid no-padding><ion-row><ion-col>Cameras de surveillance: </ion-col><ion-col class="bl">{{value2.camera}}</ion-col></ion-row></ion-grid>    </p>
+      <hr/>
+  </ion-card-content>
+</ion-card>
+
+<ion-card class="ff">
+  <ion-card-header>
+    <ion-card-title class="titleDesc">Avis</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <p> {{value2.avis}} </p>
+    
+  </ion-card-content>
+</ion-card>
+
+
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>

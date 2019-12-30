@@ -1,0 +1,48 @@
+<!--
+  Generated template for the ListeImmeublePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Immeuble</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addItem(build.uid)">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+
+<div class="item-profile" text-center #profilePic [style.background-image]="'url(' + build.profilePic + ')'"></div>
+  <ion-list>
+    <ion-item-sliding *ngFor="let item of params.items">
+      <button ion-item (click)="openItem(item)">
+        <ion-avatar item-start>
+          <img [src]="item.profilePic" />
+        </ion-avatar>
+        <h2>{{item.nomLocataire}} {{item.prenomLocataire}}</h2>
+        <p *ngIf="item.Time">{{item.Time}}</p>
+        <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note>
+      </button>
+
+      <ion-item-options>
+        <button ion-button color="danger" (click)="deleteItem(item)">
+          {{ 'DELETE_BUTTON' }}
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+   <ion-fab right bottom>
+    <button ion-fab (click)="addBuilding(build.uid)"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+
+</ion-content>

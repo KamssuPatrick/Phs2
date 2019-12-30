@@ -1,0 +1,55 @@
+
+<ion-header>
+
+        <ion-navbar color="primary">
+          <ion-title>Chat</ion-title>
+        </ion-navbar>
+      
+      </ion-header>
+    
+    
+    <ion-content padding #content>
+    
+    <div>
+        <ion-list no-lines style="border: none;">
+            <ion-item *ngFor="let message of allMessages; let last = last" (press)="showMessageConfirm(message, myDetails, userDetails)">
+    
+                {{last ? callFunction() : ''}}
+    
+                <!-- <ion-avatar item-right *ngIf="message.Id != details.Id">
+                    <img src="{{myDetails.Photo}}">
+                </ion-avatar> -->
+                <div *ngIf="message.Id === userDetails.id && message.Body.toString().startsWith('https://firebasestorage')" >
+                    <p><img class="image" src="{{message.Body}}" (click)="pd(id, index, image)"></p> 
+                    <p>{{message.Time}}</p>
+                </div>
+    
+                <div class="bubble me" *ngIf="message.Id === userDetails.id && !message.Body.toString().startsWith('https://firebasestorage')" >
+                    <h3> {{message.Body}} <h6>{{message.Time}}</h6></h3>
+                </div>
+    
+                <!-- <ion-avatar item-left *ngIf="message.Id === details.Id">
+                    <img src="{{details.Photo}}">
+                </ion-avatar> -->
+                <div class="bubble you" *ngIf="message.Id != userDetails.id">
+                    <h3>{{message.Body}} <h6>{{message.Time}}</h6> </h3>
+                </div>
+    
+            </ion-item>
+        </ion-list>
+    </div>
+    
+    
+    </ion-content>
+    
+    <ion-footer no-border>
+        <ion-toolbar>
+        <ion-textarea type="text" [(ngModel)]="newMessage.body" ></ion-textarea>
+          <ion-buttons end>
+              <button ion-button ion-icon icon-only (click)="sendMessage()">
+                  <ion-icon name="send"></ion-icon>
+              </button>
+          </ion-buttons>
+        </ion-toolbar>     
+    
+    </ion-footer>

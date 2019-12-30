@@ -1,0 +1,85 @@
+
+<ion-header>
+  <ion-toolbar no-padding>
+    <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="onEvent('onTextChange', $event)"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<!--Theme Google Card - Styled cards 2-->
+<ion-content>
+<ion-grid no-padding >
+  <ion-row *ngIf="data != null">
+    <ion-col col-12 col-lg-4 *ngFor="let item of data.items;let i = index">
+      <ion-card text-left>
+        <!--Card Image-->
+        <div card-image>
+          <img [src]="item.image" height='200' (click)="detail(item.uid,item.image, item.index)"/>
+          <ion-badge ion-fixed item-end class="badge-dark">{{item.prix}} / jour</ion-badge>
+    
+        <span *ngIf="item.url === 'Aucun lien enregistré!'">  
+          <button ion-fixed ion-button button-action-shit (click)="onVisite()">
+            <ion-icon name='eye-off'> </ion-icon>
+          </button>
+        </span>
+
+        <span *ngIf="item.url != 'Aucun lien enregistré!'">
+          <button ion-fixed ion-button button-action-shit (click)="onVisite()">
+            <ion-icon name='eye'> </ion-icon>
+          </button>
+        </span>
+
+        <span *ngIf="!item.url">
+          <button ion-fixed ion-button button-action-shit (click)="onVisite()">
+            <ion-icon name='eye-off'> </ion-icon>
+          </button>
+        </span>
+
+         
+          
+        </div>
+        <!--Card descriptiom-->
+        <ion-card-content (click)="detail(item.uid,item.image, item.index)">
+            <p>Appartement ultra-moderne 3 chambres ( meublé ) à louer à Bonapriso Haut Standing - Grandes pieces - Ascenseur - Groupe électrogène - Parking - Gardiens H24 - Cameras de surveillance -  Grand Jardin 💰 :  100mille  fcfa/jour</p>  
+        </ion-card-content>
+
+
+      <ion-row no-padding>      
+      
+      <ion-col text-left>
+      <span *ngIf="allFav != null">
+      
+        
+          <span *ngIf="find(allFav,item.uid)">
+            <button ion-button clear small color="danger" icon-left (click)="Delfavoris(item.uid, item.index)">
+            <ion-icon name="star" color="danger" ></ion-icon>
+            
+            Favoris 
+          </button>
+          
+          
+          </span>
+      </span>
+
+        <span *ngIf="!find(allFav,item.uid)">
+          <button  ion-button clear small color="danger" icon-left (click)="Addfavoris(item.uid, item.index, item, item.image)">
+            <ion-icon name="star-outline" color="danger" ></ion-icon>
+            Favoris
+          </button>
+        </span>
+      </ion-col>
+
+      <ion-col text-right>
+        <button ion-button clear small color="danger" icon-left (click)="share(card)">
+          <ion-icon name="mail"></ion-icon>
+          Message
+        </button>
+      </ion-col>
+    </ion-row>
+      </ion-card>
+    </ion-col>
+    
+
+    
+  </ion-row>
+</ion-grid>
+</ion-content>

@@ -1,0 +1,154 @@
+page-page-accueil {
+    .scroll-content {
+        margin-top: 0 !important;
+      }
+    #butt_color_bloquer
+    {
+        background-color: #e9868b;
+    }
+
+    #butt_color_supprimer
+    {
+        background-color: #FE3939;
+    }
+    ion-input{
+        color: black;
+    }
+    ion-label .deco{
+        color: grey;
+        margin-left:2px;
+    }
+    ion-row.center1{
+        text-align: center;
+    }
+    
+    ion-grid,
+    ion-row {
+        //height: 100%!important;
+        [background-size] {
+            height: 40%;
+            position: relative;
+            
+        }
+        
+        ion-card#cad{
+          background: white;
+          margin:0;
+          width: 100%;
+          #service{
+            width: 100%;
+            tr, td{
+              border:1.5px solid rgba(0, 0, 0,0.1);
+              text-align: center;
+              padding: 10px;
+            }
+           
+          }
+        }
+
+        [register-title] {
+            color: color($register, register-image-title);
+            position: absolute;
+            bottom: 10px;
+            left: 25px;
+            z-index: 999;
+        }
+      
+        ion-item .detail{
+            font-size: 18px;
+            margin-bottom: 5px ;
+        }
+        div.detail{ 
+            overflow: auto!important;  
+        }
+        div.boss{
+            padding: 5px;
+            
+            margin-top:0!important;
+        }
+    }
+
+
+
+ 
+  [background-size] {
+    min-height: 230px!important;
+    position: relative;
+
+    ion-item {
+      position: absolute;
+      z-index: 2;
+      width: 200px!important;
+      left:0;
+      right:0;
+      margin-left:auto;
+      margin-right:auto;
+      top: 90%;
+      margin-top: -90px;
+      border-radius: 50px;
+      height: 15px;
+    }
+
+  }
+  .col{
+    background: gray;
+    border: think solid black;
+    }
+
+
+    ion-scroll[scrollX] {
+      white-space: nowrap;
+      height: 120px;
+      overflow: hidden;
+  
+      .scroll-item {
+        display: inline-block;
+      }
+  
+      .selectable-icon{
+        margin: 10px 20px 10px 20px;
+        color: red;
+        font-size: 100px;
+      }
+  
+      ion-avatar img{
+        margin: 10px;
+      }
+    }
+  
+    ion-scroll[scroll-avatar]{
+      height: 60px;
+    }
+  
+    /* Hide ion-content scrollbar */
+    ::-webkit-scrollbar{
+      display:none;
+    }
+
+
+.scroll-zoom-wrapper {
+  white-space: nowrap;
+}
+
+.caard{
+  width: 220px !important;
+  display: inline-block;
+  max-height: 100% !important;
+}
+
+ion-scroll {
+  min-height: 380px; 
+  height: auto;
+
+      .scroll-content {
+      padding: 0px !important;
+  }    
+
+}
+
+.images{
+  height: 50%;
+}
+
+
+}

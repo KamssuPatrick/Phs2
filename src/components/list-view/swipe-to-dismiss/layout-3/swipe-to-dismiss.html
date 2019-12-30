@@ -1,0 +1,40 @@
+<!-- Themes Swipe To Dismiss - Full width image -->
+<ion-grid *ngIf="data != null">
+    <ion-row no-padding>
+        <ion-col col-12 col-sm-6 col-md-12 col-lg-8 col-xl-6 *ngFor="let group of data.items;let i = index;">
+
+        <div (click)="onEvent('onItemClick', group.title, $event)">
+             <ion-slides autoplay="8000" loop="true" speed="6000">
+    <ion-slide >
+      <img src="{{group.image}}" class = "images" >
+    </ion-slide>
+    
+  </ion-slides>
+  </div>
+    
+                <div gallery-description>
+                    <!--<h6 gallery-subtitle>{{group.items.length}} Service(s)</h6>-->
+                    <h2 gallery-title text-wrap>{{group.title}} </h2>
+                </div>
+        </ion-col>
+<ion-content>
+  <ion-grid no-padding *ngIf="data != null">
+    <ion-row>
+      <ion-col col-12 align-self-end>
+        <ion-list padding no-margin>
+          <ion-item-sliding margin-bottom *ngFor="let item of data.items" #slidingItem>
+            <ion-item no-lines background-size (click)="onEvent('onItemClick', item.title, $event)" [ngStyle]="{'background-image': 'url(' + item.image + ')'}">
+              <div title-block>
+                <!-- Subtitle -->
+                <p item-subtitle>{{item.subtitle}}</p>
+                <!-- Title -->
+                <h1 header-title text-wrap>{{item.title}}</h1>
+              </div>
+            </ion-item>
+            <!---Action Button-->
+            
+          </ion-item-sliding>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+</ion-grid>

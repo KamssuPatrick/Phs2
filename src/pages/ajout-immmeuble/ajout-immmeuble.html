@@ -1,0 +1,134 @@
+<!--
+  Generated template for the AjoutProduitPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+  
+  <ion-title>Ajouter un Immeuble</ion-title>
+      
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content >
+  <form  #registerForm="ngForm">
+      <ion-row>
+
+ 
+
+  <ion-card>
+  <ion-card-header>
+    <ion-card-title>Nom de l'immeuble</ion-card-title>
+  </ion-card-header>
+
+    <ion-item>
+    <ion-textarea placeholder="Nom de l'immeuble" name="nomImmeuble" [(ngModel)]="nomImmeuble" clearOnEdit="true"></ion-textarea>
+    </ion-item>
+
+    </ion-card>
+
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Général</ion-card-title>
+  </ion-card-header>
+
+  <ion-item>
+  <ion-label>Nombre d'étage</ion-label>
+    <ion-input type="number" placeholder="Nombre d'étage" name="nbreEtage" [(ngModel)]="nbreEtage" required></ion-input>
+  </ion-item>
+
+<ion-item>
+<ion-label>Nombre de chambre</ion-label>
+    <ion-input type="number" placeholder="Nombre de chambre" name="nbreChambre" [(ngModel)]="nbreChambre"  required></ion-input>
+  </ion-item>
+
+<ion-item>
+<ion-label>Nombre d'appartement</ion-label>
+    <ion-input type="number" placeholder="Nombre d'appartement" name="nbreAppart" [(ngModel)]="nbreAppart"  required></ion-input>
+  </ion-item>
+
+  <ion-item>
+<ion-label>Nombre de studio</ion-label>
+    <ion-input type="number" placeholder="Nombre de studio" name="nbreStudio" [(ngModel)]="nbreStudio"  required></ion-input>
+  </ion-item>
+
+  </ion-card>
+
+  <ion-card>
+  <ion-card-header>
+    <ion-card-title>Localisation</ion-card-title>
+  </ion-card-header>
+
+  <ion-item>
+  <ion-label>Ville</ion-label>
+    <ion-input type="text" placeholder="Ville" name="ville" [(ngModel)]="ville" required></ion-input>
+  </ion-item>
+
+<ion-item>
+<ion-label>Quartier</ion-label>
+    <ion-input type="text" placeholder="Quartier" name="quartier" [(ngModel)]="quartier"  required></ion-input>
+  </ion-item>
+  </ion-card>
+
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Autres</ion-card-title>
+  </ion-card-header>
+
+    <ion-item>
+    <ion-textarea placeholder="Autre" name="autre" [(ngModel)]="autre" clearOnEdit="true"></ion-textarea>
+    </ion-item>
+</ion-card>
+
+<!--
+ <ion-card text-center>
+    <ion-card-header>
+      <ion-card-title>Choisissez une photo de l'immeuble</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="fileUpload btn btn-primary">
+        <span>Upload</span>
+        <ion-item>
+          <p align="center"><img src="{{myphoto}}"></p>
+
+          
+
+        </ion-item>
+       
+        <ion-item>
+            <ion-fab center bottom class="upButton">
+              <button ion-fab color="primary" (click)="getImage()">
+                <ion-icon name="cloud-upload"></ion-icon>
+              </button>
+            </ion-fab>
+        </ion-item>
+       
+        
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+-->
+
+    <!--<button full>
+      <ion-label>Images Secondaires</ion-label>
+      <input multiple type="file" (change)="loadImageFromDevice($event)" accept="image/png, image/jpeg">
+    </button>-->
+
+             </ion-row>
+
+      <ion-row>
+        <ion-col class="signup-col">
+          <!--<button ion-button class="submit-btn" full type="submit" [disabled]="!registerForm.form.valid">Ajouter</button>-->
+          <button  full ion-button text-only round (click)="Ajout()">Ajouter</button>
+        </ion-col>
+      </ion-row>
+
+    </form>
+</ion-content>

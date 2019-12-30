@@ -1,0 +1,82 @@
+<!--
+  Generated template for the ModificationProfilPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!-- Themes Register + Image -->
+<ion-header>
+  <ion-navbar transparent>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Mon profil</ion-title>
+    
+  </ion-navbar>
+</ion-header>
+
+
+
+
+
+<ion-content >
+    <ion-grid no-padding *ngIf="user">
+        <ion-row center>
+  
+
+
+          <ion-col no-padding col-12 background-size [ngStyle]="{'background-image': 'url(../../assets/img/gallery/bend/home.jpg)'}">
+              <!-- Header Title -->
+              <img class="circle-pic" src="{{user.photoURL}}" height='260' width='220' > 
+              
+              <h1 ion-text register-title text-wrap class="nnd" *ngIf="value2">{{value2.username}} {{value2.prenom}}</h1>
+          </ion-col>
+          <ion-col form col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>
+            <div *ngIf="value2" class="boss">
+              
+
+              <ion-item>
+                  <h1>
+                      <ion-card-title>Général</ion-card-title>
+                  </h1>
+                <div class="detail">Nom:    <span class="deco">{{value2.username}}</span></div>
+                <div class="detail">Prénom: <span class="deco">{{value2.prenom}}</span></div>
+                <div class="detail">Adresse mail: <span class="deco">{{value2.email}}</span> </div>
+              
+              </ion-item>
+
+
+              <ion-card-header>
+              <ion-card-title>Plus de détails</ion-card-title>
+            </ion-card-header>
+
+              <ion-item>
+              <ion-label>Profession</ion-label>
+              <ion-input type="text" [(ngModel)]="value2.profession" name="profession"  required></ion-input>
+            </ion-item>
+
+             <ion-item>
+              <ion-label>Société</ion-label>
+              <ion-input type="text" [(ngModel)]="value2.societe" name="societe"  required></ion-input>
+            </ion-item>
+
+             <ion-item>
+              <ion-label>Téléphone</ion-label>
+              <ion-input type="number" [(ngModel)]="value2.telephone" name="telephone"  required></ion-input>
+            </ion-item>
+
+            
+            </div>
+            </ion-col>
+
+            </ion-row>            
+  </ion-grid>
+
+    <ion-footer (click)="updateNote()">
+  <ion-toolbar class="modif">
+    <ion-title>
+      Modifier
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>
+</ion-content>
